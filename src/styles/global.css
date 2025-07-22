@@ -1,0 +1,56 @@
+/* Global Styles for PC Gamer Store */
+
+/* Import the gaming font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+/* Base gaming theme styles */
+:root {
+  --primary-color: #00ff41; /* Matrix green */
+  --secondary-color: #ff0080; /* Cyber pink */
+  --background-dark: #0a0a0a;
+  --background-darker: #000000;
+  --text-light: #ffffff;
+  --text-glow: #00ff41;
+  --accent-blue: #00bcd4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', monospace;
+  background: var(--background-dark);
+  color: var(--text-light);
+  line-height: 1.6;
+}
+
+/* Gaming-style headers */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px var(--text-glow);
+}
+
+/* Gaming button style */
+.btn-gamer {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  border: none;
+  color: var(--background-dark);
+  padding: 12px 24px;
+  font-family: 'Orbitron', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 255, 65, 0.3);
+}
+
+.btn-gamer:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 65, 0.5);
+}
