@@ -1,26 +1,160 @@
 ---
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import Sidebar from "../components/Sidebar.astro";
 import "../styles/global.css";
+
+export interface Props {
+	title?: string;
+	description?: string;
+	keywords?: string;
+	image?: string;
+	canonical?: string;
+}
+
+const {
+	title = "Nexus Gaming Ecuador - Tienda Gaming #1 en Ecuador | PCs, Laptops y Periféricos Gaming",
+	description = "🎮 Tienda Gaming líder en Ecuador. PCs Gaming, Laptops Gaming, Componentes, Periféricos y Accesorios. ✅ Garantía ✅ Envíos a todo Ecuador ✅ Soporte técnico especializado.",
+	keywords = "gaming, pc gaming, laptops gaming, ecuador, quito, guayaquil, componentes pc, tarjetas graficas, procesadores, memoria ram, ssd, perifericos gaming, teclados gaming, mouse gaming, audífonos gaming, monitores gaming, sillas gaming, nexus gaming",
+	image = "/og-image.jpg",
+	canonical = Astro.url.href
+} = Astro.props;
+
+const siteName = "Nexus Gaming Ecuador";
+const siteUrl = "https://nexusgaming.ec";
 ---
+
 <!doctype html>
-<html lang="en">
+<html lang="es-EC">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+		<!-- SEO Meta Tags -->
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="Nexus Gaming Ecuador" />
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href={canonical} />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={`${siteUrl}${image}`} />
+		<meta property="og:url" content={canonical} />
+		<meta property="og:site_name" content={siteName} />
+		<meta property="og:locale" content="es_EC" />
+		
+		<!-- Twitter Card -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={`${siteUrl}${image}`} />
+		<meta name="twitter:site" content="@nexusgaming_ec" />
+		
+		<!-- Online Store Schema -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "OnlineStore",
+				"name": "Nexus Gaming Ecuador",
+				"description": "Tienda Gaming Virtual en Ecuador. PCs Gaming, Laptops Gaming, Componentes y Periféricos con envíos bajo pedido.",
+				"url": "https://nexusgaming.ec",
+				"telephone": "+593-99-123-4567",
+				"email": "info@nexusgaming.ec",
+				"address": {
+					"@type": "PostalAddress",
+					"addressCountry": "EC",
+					"addressRegion": "Ecuador"
+				},
+				"areaServed": {
+					"@type": "Country",
+					"name": "Ecuador"
+				},
+				"hasOfferCatalog": {
+					"@type": "OfferCatalog",
+					"name": "Productos Gaming",
+					"itemListElement": [
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Product",
+								"name": "PCs Gaming"
+							}
+						},
+						{
+							"@type": "Offer", 
+							"itemOffered": {
+								"@type": "Product",
+								"name": "Laptops Gaming"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Product", 
+								"name": "Componentes PC"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Product",
+								"name": "Periféricos Gaming"
+							}
+						}
+					]
+				},
+				"paymentAccepted": "Transferencias Bancarias, Efectivo",
+				"priceRange": "$$",
+				"image": "https://nexusgaming.ec/logo.jpg",
+				"sameAs": [
+					"https://instagram.com/nexusgaming.ec"
+				],
+				"potentialAction": {
+					"@type": "OrderAction",
+					"deliveryMethod": "OnDemandDelivery"
+				}
+			}
+		</script>
+		
+		<!-- Favicon -->
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		
+		<!-- Fonts -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap"
 			rel="stylesheet"
 		/>
+		
+		<!-- Additional Meta -->
+		<meta name="theme-color" content="#00ff41" />
 		<meta name="generator" content={Astro.generator} />
-		<title>PC Gamer Store</title>
+		
+		<!-- Verificaciones -->
+		<!-- <meta name="google-site-verification" content="tu-codigo-google" /> -->
+		<!-- <meta name="facebook-domain-verification" content="tu-codigo-facebook" /> -->
 	</head>
-	<body class="relative min-h-screen">
+	<body class="relative min-h-screen flex flex-col">
 		<div
 			class="absolute top-0 left-0 z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px]"
 		>
 		</div>
-		<slot />
+		<Header />
+		<div class="flex flex-1">
+			<Sidebar />
+			<main class="flex-1">
+				<slot />
+			</main>
+		</div>
+		<Footer />
 	</body>
 </html>

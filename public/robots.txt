@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://nexusgaming.ec/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+
+# Allow specific bot access to important pages
+User-agent: Googlebot
+Allow: /
+Allow: /productos/
+Allow: /gaming-pcs/
+Allow: /componentes/
+Allow: /perifericos/
+Allow: /laptops/
+
+# Crawl delay for other bots
+Crawl-delay: 1

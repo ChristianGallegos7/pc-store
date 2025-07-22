@@ -1,0 +1,234 @@
+<footer class="footer-gaming">
+    <div class="footer-container">
+        <!-- Logo y descripción -->
+        <div class="footer-section">
+            <h3 class="footer-logo">NEXUS GAMING</h3>
+            <p class="footer-description">
+                Tu tienda gaming virtual de confianza en Ecuador. Hardware, periféricos y accesorios 
+                gaming con envíos bajo pedido a todo el país.
+            </p>
+            <div class="social-links">
+                <a href="https://instagram.com/nexusgaming.ec" target="_blank" aria-label="Instagram">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                    </svg>
+                </a>
+            </div>
+            <p class="business-type">🌐 Tienda Virtual | 📦 Envíos bajo pedido</p>
+        </div>
+
+        <!-- Enlaces rápidos -->
+        <div class="footer-section">
+            <h4>Productos</h4>
+            <ul class="footer-links">
+                <li><a href="/gaming-pcs">PCs Gaming</a></li>
+                <li><a href="/componentes">Componentes</a></li>
+                <li><a href="/perifericos">Periféricos</a></li>
+                <li><a href="/laptops">Laptops Gaming</a></li>
+                <li><a href="/accesorios">Accesorios</a></li>
+            </ul>
+        </div>
+
+        <!-- Soporte -->
+        <div class="footer-section">
+            <h4>Información</h4>
+            <ul class="footer-links">
+                <li><a href="/como-comprar">¿Cómo Comprar?</a></li>
+                <li><a href="/envios">Envíos y Entregas</a></li>
+                <li><a href="/garantias">Garantías</a></li>
+                <li><a href="/metodos-pago">Métodos de Pago</a></li>
+                <li><a href="/faq">Preguntas Frecuentes</a></li>
+            </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-section">
+            <h4>Contacto</h4>
+            <div class="contact-info">
+                <p>🌐 Tienda Virtual Ecuador</p>
+                <p>� WhatsApp: +593 99 123 4567</p>
+                <p>📧 Instagram: @nexusgaming.ec</p>
+                <p>✉️ Email: info@nexusgaming.ec</p>
+                <p>� Envíos bajo pedido a todo Ecuador</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-bottom">
+        <div class="footer-container">
+            <p>&copy; 2025 Nexus Gaming Ecuador. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="/privacidad">Política de Privacidad</a>
+                <a href="/terminos">Términos y Condiciones</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer-gaming {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        border-top: 2px solid var(--primary-color);
+        margin-top: auto;
+        color: var(--text-light);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-gaming::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--primary-color), var(--secondary-color), transparent);
+    }
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 3rem 2rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 2rem;
+    }
+
+    .footer-logo {
+        font-family: 'Orbitron', monospace;
+        font-weight: 900;
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        text-shadow: 0 0 10px var(--text-glow);
+        margin-bottom: 1rem;
+        letter-spacing: 2px;
+    }
+
+    .footer-description {
+        color: #cccccc;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social-links a {
+        color: var(--text-light);
+        transition: all 0.3s ease;
+        padding: 0.5rem;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .social-links a:hover {
+        color: var(--primary-color);
+        background: rgba(0, 255, 65, 0.1);
+        transform: translateY(-2px);
+    }
+
+    .footer-section h4 {
+        font-family: 'Orbitron', monospace;
+        color: var(--primary-color);
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1rem;
+    }
+
+    .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-links li {
+        margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+        color: #cccccc;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+    }
+
+    .footer-links a:hover {
+        color: var(--primary-color);
+        padding-left: 0.5rem;
+    }
+
+    .contact-info p {
+        color: #cccccc;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .business-type {
+        color: var(--primary-color) !important;
+        font-weight: 600;
+        font-size: 0.85rem !important;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 1rem !important;
+        text-shadow: 0 0 5px var(--text-glow);
+    }
+
+    .footer-bottom {
+        background: rgba(0, 0, 0, 0.5);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem 0;
+    }
+
+    .footer-bottom .footer-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+        grid-template-columns: none;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        color: #888;
+        font-size: 0.8rem;
+    }
+
+    .footer-legal {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    .footer-legal a {
+        color: #888;
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: color 0.3s ease;
+    }
+
+    .footer-legal a:hover {
+        color: var(--primary-color);
+    }
+
+    @media (max-width: 768px) {
+        .footer-container {
+            grid-template-columns: 1fr;
+            padding: 2rem 1rem;
+        }
+
+        .footer-bottom .footer-container {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+
+        .footer-legal {
+            justify-content: center;
+        }
+    }
+</style>
